@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+  <script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
+  <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+  <!--[if lte IE 8]>
+    <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet' >
+  <![endif]-->
+  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; height:94%; bottom:0; width:100%; }
+
+    .pageheader{background-color:gray; width:100%; height:40px; color:#ffffff; padding-top:10px; font-size:20px;}
+
+#importantcities{
+        position: absolute;
+        top: 150px;
+        left: 2px;
+        z-index: 100;
+    }
+#importantcities ul{
+  list-style: none;
+}
+
+#importantcities a {
+        font-size: 13px;
+        background: #FFF;
+        color: #3C4E5A;
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #BBB;
+        min-width: 138px;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+    .header
+    {
+      width:200px;
+      text-align: center;
+    }
+
+    #importantcities li:first-child a{
+        background: #3887BE;
+        color:#FFFFFF;
+        font-size: 14px;
+        font-weight:bold;
+    }
+
+
+  </style>
+</head>
+<body>
+<div class="pageheader">
+  Tanzania Population Sensa 2012
+</div>
+<div id='importantcities'>
+    <ul>
+        <li><a href="#" >Important Cities</a></li>
+        <li><a href='#' id='dar' data-position="">Dar es salaam</a></li>
+        <li><a href='#' class='active' id='dodoma' data-position="">Dodoma</a></li>
+    </ul>
+</div>
+<div id='map'></div>
+<!-- Legend -->
+
+  <style type='text/css'>
+    .my-legend .legend-scale ul li {
+      display: block;
+      float: left;
+      width: 100px;
+      margin-bottom: 6px;
+      text-align: center;
+      font-size: 80%;
+      list-style: none;
+      }
+  </style>
+</div>
+
+
+<!-- Legend testing-->
+
+
+<script type='text/javascript'>
+var map = L.mapbox.map('map','hans2mike.map-he3g41gm')
+//var map = L.mapbox.map('map', 'mahanga.map-bdsflq9d',{zoomControl:false})
+    .addControl(L.mapbox.geocoderControl('hans2mike.map-he3g41gm'));
+</script>
+</body>
+</html>
